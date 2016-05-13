@@ -26,7 +26,7 @@ echo '-----> [1/5] Extracting pngs'
 avconv -i /tmp/in/test.avi -vsync 1 -an -y -qscale 1 /tmp/out/out_%05d.png
 
 echo '-----> [2/2] Creating the GIF'
-gimp -i --batch-interpreter=python-fu-eval -b "pdb.python_fu_create_gif('/tmp/out', '/tmp/final.gif', '1.0')" -b "pdb.gimp_quit(1)"
+gimp --no-interface --no-data --no-fonts --batch-interpreter=python-fu-eval -b "pdb.python_fu_create_gif('/tmp/out', '/tmp/final.gif', '1.0')" -b "pdb.gimp_quit(1)"
 
 cp /tmp/final.gif /tmp/write/$output
 
