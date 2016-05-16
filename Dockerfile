@@ -28,8 +28,9 @@ ENV OUTPUT_FILE=/tmp/out/test.gif
 #
 ENV WRITE_FOLDER=/tmp/write
 ENV OUTPUT_FILE_NAME=test.gif
+ENV SCALING_FACTOR="1"
 
 ADD bin /home/raptor/bin
 
-CMD /home/raptor/bin/run_conversion.sh $OUTPUT_FILE_NAME
+CMD /home/raptor/bin/run_conversion.sh $OUTPUT_FILE_NAME $SCALING_FACTOR
 
